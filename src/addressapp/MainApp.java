@@ -4,9 +4,6 @@ import addressapp.model.Person;
 import addressapp.view.PersonEditDialogController;
 import addressapp.view.PersonOverviewController;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
