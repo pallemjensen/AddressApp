@@ -17,10 +17,11 @@ public class MainApp extends Application {
 
     private Stage primaryStage;
     private BorderPane rootLayout;
-    /**
+    
+     /**
      * The data as an observable list of Persons.
      */
-    private final ObservableList<Person> personData = FXCollections.observableArrayList();
+    private ObservableList<Person> personData = FXCollections.observableArrayList();
 
     /**
      * Constructor
@@ -72,29 +73,31 @@ public class MainApp extends Application {
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
     /**
-     * Shows the person overview inside the root layout.
-     */
-    public void showPersonOverview() {
-        try {
-            // Load person overview.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/PersonOverview.fxml"));
-            AnchorPane personOverview = (AnchorPane) loader.load();
+ * Shows the person overview inside the root layout.
+ */
+public void showPersonOverview() {
+    try {
+        // Load person overview.
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MainApp.class.getResource("view/PersonOverview.fxml"));
+        AnchorPane personOverview = (AnchorPane) loader.load();
 
-            // Set person overview into the center of root layout.
-            rootLayout.setCenter(personOverview);
-            
-            // Give the controller access to the main app.
+        // Set person overview into the center of root layout.
+        rootLayout.setCenter(personOverview);
+
+        // Give the controller access to the main app.
         PersonOverviewController controller = loader.getController();
         controller.setMainApp(this);
-            
-        } catch (IOException e) {
-        }
+
+    } catch (IOException e) {
+        e.printStackTrace();
     }
+}
 
     /**
      * Returns the main stage.
