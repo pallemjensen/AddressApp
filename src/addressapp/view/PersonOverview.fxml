@@ -22,9 +22,6 @@
                       <TableColumn fx:id="firstNameColumn" prefWidth="139.0" text="First Name" />
                       <TableColumn fx:id="lastNameColumn" prefWidth="142.0" text="Last Name" />
                     </columns>
-                     <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                     </columnResizePolicy>
                   </TableView>
                </children>
             </AnchorPane>

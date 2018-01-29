@@ -15,6 +15,8 @@ public class PersonOverviewController {
     private TableColumn<Person, String> firstNameColumn;
     @FXML
     private TableColumn<Person, String> lastNameColumn;
+    
+   
 
     @FXML
     private Label firstNameLabel;
@@ -48,6 +50,7 @@ public class PersonOverviewController {
         // Initialize the person table with the two columns.
         firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
         lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
+        personTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
     }
 
     /**
