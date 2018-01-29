@@ -16,8 +16,6 @@ import javafx.beans.property.StringProperty;
 
 /**
  * Model class for a Person.
- *
- * @author Marco Jakob
  */
 public class Person {
 
