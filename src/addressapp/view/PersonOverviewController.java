@@ -112,7 +112,6 @@ private void handleDeletePerson() {
         alert.setTitle("No Selection");
         alert.setHeaderText("No Person Selected");
         alert.setContentText("Please select a person in the table.");
-
         alert.showAndWait();
     }
 }
