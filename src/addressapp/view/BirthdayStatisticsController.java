@@ -13,13 +13,16 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.XYChart;
 import addressapp.model.Person;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.Initializable;
 
 /**
  * The controller for the birthday statistics view.
  * 
  * @author Marco Jakob
  */
-public class BirthdayStatisticsController {
+public class BirthdayStatisticsController implements Initializable{
 
     @FXML
     private BarChart<String, Integer> barChart;
@@ -27,13 +30,15 @@ public class BirthdayStatisticsController {
     @FXML
     private CategoryAxis xAxis;
 
-    private ObservableList<String> monthNames = FXCollections.observableArrayList();
+    private ObservableList<String> monthNames;// = FXCollections.observableArrayList();
 
     /**
      * Initializes the controller class. This method is automatically called
      * after the fxml file has been loaded.
      */
-    private void initialize() {
+     @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        monthNames = FXCollections.observableArrayList();
         // Get an array with the English month names.
         String[] months = DateFormatSymbols.getInstance(Locale.ENGLISH).getMonths();
         // Convert it to a list and add it to our ObservableList of months.
@@ -65,4 +70,6 @@ public class BirthdayStatisticsController {
 
         barChart.getData().add(series);
     }
+
+   
 }
