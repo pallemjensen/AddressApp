@@ -16,4 +16,12 @@
         <postalCode>1234</postalCode>
         <street>some street</street>
     </person>
+    <person>
+        <birthday>1932-02-21</birthday>
+        <city>erere</city>
+        <firstName>søren</firstName>
+        <lastName>bentsen</lastName>
+        <postalCode>7878</postalCode>
+        <street>fgf</street>
+    </person>
 </persons>
