@@ -9,7 +9,7 @@
         <street>some street</street>
     </person>
     <person>
-        <birthday>1999-02-21</birthday>
+        <birthday>1999-10-21</birthday>
         <city>some city</city>
         <firstName>Stefan</firstName>
         <lastName>Meier</lastName>
@@ -17,7 +17,7 @@
         <street>some street</street>
     </person>
     <person>
-        <birthday>1932-02-21</birthday>
+        <birthday>1932-07-21</birthday>
         <city>erere</city>
         <firstName>søren</firstName>
         <lastName>bentsen</lastName>
